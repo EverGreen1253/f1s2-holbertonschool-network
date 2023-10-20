@@ -6,4 +6,4 @@ then
     exit
 fi
 
-ping $1 -c 5
+ping "$1" -c 5
