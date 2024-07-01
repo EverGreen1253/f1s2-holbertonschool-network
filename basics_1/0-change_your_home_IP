@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # updates the IP addresses in /etc/hosts for localhost and facebook.com
 
-HOSTS_FILE="/etc/hosts"
+HOSTS_FILE="hosts.test"
 
-sudo -S sed -i -e 's/^/#/' $HOSTS_FILE
-{
-    sudo -S echo ""
-    sudo -S echo "127.0.0.2 localhost"
-    sudo -S echo "8.8.8.8 facebook.com"
-} >> $HOSTS_FILE
+sudo sed -i -e 's/^/#/' $HOSTS_FILE
+echo "" | sudo tee -a $HOSTS_FILE > /dev/null
+echo "127.0.0.2 localhost" | sudo tee -a $HOSTS_FILE > /dev/null
+echo "8.8.8.8 facebook.com" | sudo tee -a $HOSTS_FILE > /dev/null
