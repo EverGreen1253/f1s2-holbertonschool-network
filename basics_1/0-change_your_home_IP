@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # updates the IP addresses in /etc/hosts for localhost and facebook.com
 
-HOSTS_FILE="hosts.test"
+HOSTS_FILE="/etc/hosts"
 
 sed -i -e 's/^/#/' $HOSTS_FILE
 echo "" | tee -a $HOSTS_FILE > /dev/null
