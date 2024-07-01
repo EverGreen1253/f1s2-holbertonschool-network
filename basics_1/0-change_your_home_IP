@@ -3,9 +3,9 @@
 
 HOSTS_FILE="/etc/hosts"
 
-sed -i -e 's/^/#/' $HOSTS_FILE
+sudo sed -i -e 's/^/#/' $HOSTS_FILE
 {
-    ""
-    "127.0.0.2 localhost"
-    "8.8.8.8 facebook.com"
+    sudo echo ""
+    sudo echo "127.0.0.2 localhost"
+    sudo echo "8.8.8.8 facebook.com"
 } >> $HOSTS_FILE
