@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Dispalys the sctive IPv4 addresses in the current system
 
 # Run the following command in the docker terminal to install the 'ip' command:
 # apt install iproute2
