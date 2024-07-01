@@ -4,4 +4,7 @@
 # Run the following command in the docker terminal to install the 'ip' command:
 # apt install iproute2
 
-ip -4 addr show | grep inet | cut -d ' ' -f 6 | cut -d'/' -f 1
+# ip -4 addr show | grep inet | cut -d ' ' -f 6 | cut -d'/' -f 1
+
+# Unfortunately the check only wants us to use ifconfig
+ifconfig | grep 'inet ' | awk '{print $2}'
