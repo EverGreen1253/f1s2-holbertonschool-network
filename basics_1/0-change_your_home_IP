@@ -3,7 +3,7 @@
 
 HOSTS_FILE="hosts.test"
 
-sudo sed -i -e 's/^/#/' $HOSTS_FILE
-echo "" | sudo tee -a $HOSTS_FILE > /dev/null
-echo "127.0.0.2 localhost" | sudo tee -a $HOSTS_FILE > /dev/null
-echo "8.8.8.8 facebook.com" | sudo tee -a $HOSTS_FILE > /dev/null
+sed -i -e 's/^/#/' $HOSTS_FILE
+echo "" | tee -a $HOSTS_FILE > /dev/null
+echo "127.0.0.2 localhost" | tee -a $HOSTS_FILE > /dev/null
+echo "8.8.8.8 facebook.com" | tee -a $HOSTS_FILE > /dev/null
